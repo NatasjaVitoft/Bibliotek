@@ -35,7 +35,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
-
     public static int getInt (int i) {
         System.out.println(i);
         Scanner scanner = new Scanner(System.in);

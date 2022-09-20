@@ -11,8 +11,9 @@ public class Main {
         answer = 1;
 
         while (answer!=0) {
-            System.out.println("Press '1' to create ");
-            System.out.println("Press '2' to login");
+            System.out.println("Press '1' to create a user");
+            System.out.println("Press '2' to loan a book");
+            System.out.println("Press '3' to add a book to the library");
 
             answer = scanner.nextInt();
 
@@ -21,7 +22,10 @@ public class Main {
                     create();
                     break;
                 case 2:
-                    login();
+                    loanBook();
+                    break;
+                case 3:
+                    createBook();
                     break;
             }
         }
@@ -30,6 +34,12 @@ public class Main {
         System.out.println(s);
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
+    }
+
+    public static int getInt (int i) {
+        System.out.println(i);
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
     }
 
     public static void create() {
@@ -44,18 +54,33 @@ public class Main {
 
             ps.executeUpdate();
 
-            ResultSet ids = ps.getGeneratedKeys();
-            ids.next();
-            int id = ids.getInt(1);
-            System.out.println("Next row: " + id);
+            System.out.println("\nYou have now created a user.\n");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void login() {
+    public static void loanBook() {
 
+    }
+
+    public static void createBook() {
+        String sql = "INSERT INTO books (name, author, year, copies) VALUES (?, ?, ?, ?)";
+
+        try (Connection con = getConnection();
+             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+        ) {
+
+            ps.setString(1, getString("Type name"));
+            ps.setString(2, getString("Type author"));
+            ps.setString(3, getString("Type year"));
+            ps.setString(4, getString("Type number of copies"));
+
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static Connection getConnection() {

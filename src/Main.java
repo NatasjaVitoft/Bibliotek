@@ -30,6 +30,11 @@ public class Main {
             }
         }
     }
+
+
+
+
+
     public static String getString (String s) {
         System.out.println(s);
         Scanner scanner = new Scanner(System.in);

@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Language {
-    Scanner scanner = new Scanner(System.in);
-    public static void selectLanguage{
+    public static void selectLanguage () {
+
+        Scanner scanner = new Scanner(System.in);
+
         String ans = "";
 
         Dialog dialog = new Engelsk();

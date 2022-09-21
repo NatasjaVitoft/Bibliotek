@@ -26,7 +26,7 @@ public class Input
                 break;
 
             } catch (Exception e) {
-                //        e.printStackTrace();
+
                 e.printStackTrace();
                 System.out.println("det skal være et tal !");
             }

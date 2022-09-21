@@ -11,9 +11,6 @@ public class Language {
 
         while (true) {
             System.out.println(dialog.hi());
-//          System.out.println(dialog.changeLanguage());
-//          ans = scanner.nextLine();
-
 
             if (Input.getString(dialog.changeLanguage()).equalsIgnoreCase("y")) {
                 System.out.println(dialog.selectLanguage());

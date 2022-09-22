@@ -37,6 +37,7 @@ public class Engelsk extends Dialog {
             System.out.println("Press '2' to loan a book");
             System.out.println("Press '3' to add a book to the library");
             System.out.println("Press '4' to see user information");
+            System.out.println("Press '5' to select language");
 
             answer = scanner.nextInt();
 
@@ -52,6 +53,9 @@ public class Engelsk extends Dialog {
                     break;
                 case 4:
                     //userInformation();
+                    break;
+                case 5:
+                    selectLanguage();
                     break;
 
             }

@@ -38,6 +38,7 @@ public class Dansk extends Dialog
             System.out.println("Tryk '2' for at låne en bog");
             System.out.println("Tryk '3' for at tilføje en bog til biblioteket");
             System.out.println("Tryk '4' for at se bruger information");
+            System.out.println("Tryk '5' for at skifte sprog");
 
             answer = scanner.nextInt();
 
@@ -53,6 +54,9 @@ public class Dansk extends Dialog
                     break;
                 case 4:
                     //userInformation();
+                    break;
+                case 5:
+                    selectLanguage();
                     break;
 
             }

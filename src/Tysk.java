@@ -37,6 +37,7 @@ public class Tysk extends Dialog {
             System.out.println("Drücken Sie '2', um ein Buch auszuleihen");
             System.out.println("Drücken Sie '3', um ein Buch zur Bibliothek hinzuzufügen");
             System.out.println("Drücken Sie '4', um Benutzerinformationen anzuzeigen");
+            System.out.println("Drücken Sie '5', um die Sprache auszuwählen");
 
             answer = scanner.nextInt();
 
@@ -52,6 +53,9 @@ public class Tysk extends Dialog {
                     break;
                 case 4:
                     //userInformation();
+                    break;
+                case 5:
+                    selectLanguage();
                     break;
 
             }

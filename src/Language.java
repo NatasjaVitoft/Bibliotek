@@ -25,11 +25,6 @@ public class Language {
                         dialog = new Engelsk();
                         break;
 
-
-                    case "fi":
-                        dialog = new Finsk();
-                        break;
-
                     case "deu":
                         dialog = new Tysk();
                         break;
